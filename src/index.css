@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+   height: 100vh;
+}
+
+.typing-demo {
+   width: 22rem;
+   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+   white-space: nowrap;
+   overflow: hidden;
+   border-right: 3px solid;
+   --tw-text-opacity: 1;
+   color: rgb(30 64 175 / var(--tw-text-opacity));
+   font-weight: 500;
+   font-size: 3rem;
+}
+
+@keyframes typing {
+   from {
+      width: 0;
+   }
+}
+
+@keyframes blink {
+   50% {
+      border-color: transparent;
+   }
+}

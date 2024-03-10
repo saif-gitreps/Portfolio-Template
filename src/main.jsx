@@ -21,33 +21,6 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout";
 
-// router provider takes a prop. method 1
-// const router = createBrowserRouter([
-//    {
-//       path: "/",
-//       element: <Layout />,
-//       children: [
-//          {
-//             // here empty means just /
-//             path: "",
-//             element: <Home />,
-//          },
-//          {
-//             // this means /about
-//             path: "about",
-//             element: <About />,
-//          },
-//          {
-//             path: "contact",
-//             element: <Contact />,
-//          },
-//       ],
-//    },
-// ]);
-
-//method 2
-// loader allows api calls to happen within the route, this works by calling the api when mouse is hovered
-// over a link, the api will be called and will be stored in cache.
 const router = createBrowserRouter(
    createRoutesFromElements(
       <Route path="/" element={<Layout />}>
