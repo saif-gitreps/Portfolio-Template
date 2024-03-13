@@ -8,7 +8,7 @@ export default function Header() {
                <Link to="/" className="flex items-center">
                   <img
                      src="https://cdn-icons-png.flaticon.com/512/5698/5698711.png"
-                     className="mr-3 h-14 w-14 rounded-sm"
+                     className="mr-3 h-16 w-16 rounded-sm"
                      alt="Logo"
                   />
                </Link>
@@ -17,7 +17,7 @@ export default function Header() {
                   className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
                   id="mobile-menu-2"
                >
-                  <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                  <ul className="flex flex-col mt-4 font-medium text-xl lg:flex-row lg:space-x-8 lg:mt-0">
                      <li>
                         <NavLink
                            to="/"
@@ -40,18 +40,6 @@ export default function Header() {
                            }
                         >
                            Projects and Repo
-                        </NavLink>
-                     </li>
-                     <li>
-                        <NavLink
-                           to="/contact"
-                           className={({ isActive }) =>
-                              `block py-2 pr-4 pl-3 duration-200 ${
-                                 isActive ? "text-blue-800" : "text-gray-700"
-                              } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-800 lg:p-0`
-                           }
-                        >
-                           Contact
                         </NavLink>
                      </li>
                   </ul>
