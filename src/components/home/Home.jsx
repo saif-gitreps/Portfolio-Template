@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Home() {
+   const [state, handleSubmit] = useForm("meqyzybj");
+   // if (state.succeeded) {
+   //    return <p>Thanks for joining!</p>;
+   // }
+
    return (
       <div className="mx-auto w-full max-w-7xl">
          <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-1">
@@ -42,7 +47,7 @@ export default function Home() {
                </div>
             </div>
          </aside>
-         <div className="relative overflow text-black rounded-lg sm:mx-16 mx-2 sm:py-10">
+         <div className="relative overflow text-black rounded-lg sm:mx-16 mx-2 sm:p-10">
             <h2 className="text-2xl font-bold sm:text-4xl">Technologies I work with..</h2>
             <ul className="text-xl ml-2">
                <li>
@@ -66,23 +71,44 @@ export default function Home() {
                </li>
             </ul>
          </div>
-         <div className="flex justify-end overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:p">
-            <form className="flex-col items-start gap-3 w-96 p-8 rounded-lg shadow-lg">
+         <div className="flex justify-end relative overflow text-black rounded-lg sm:mx-16 mx-2 sm:p-10 ">
+            <form
+               onSubmit={handleSubmit}
+               className="flex-col items-start gap-3 w-1/2 p-8 rounded-xl shadow-lg"
+            >
                <div className="text-blue-900 text-3xl font-semibold tracking-tighter leading-9 ">
-                  Email me
+                  Send an email{" "}
+                  <span className="text-black text-2xl">(saifrahman3092@gmail.com)</span>
                </div>
                <input
-                  type="text"
+                  type="email"
                   placeholder="Your email"
+                  id="email"
+                  name="email"
                   className="outline-none text-xl border border-gray-300 rounded px-4 py-8 w-full h-14"
                />
+               <ValidationError prefix="Email" field="email" errors={state.errors} />
                <textarea
                   placeholder="Message"
+                  id="message"
+                  name="message"
                   className="outline-none text-xl border border-gray-300 rounded px-4 py-8 w-full h-24 resize-none"
                ></textarea>
-               <button className="px-8 py-2 outline-none rounded font-medium text-white bg-blue-900 cursor-pointer">
+               <ValidationError prefix="Message" field="message" errors={state.errors} />
+               <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="px-8 py-2 outline-none rounded text-xl text-white bg-blue-900 cursor-pointer"
+               >
                   Send
                </button>
+               <p
+                  className={`${
+                     state.succeeded ? "block" : "hidden"
+                  } p-2 outline-none rounded text-xl font-extrabold text-green-700 `}
+               >
+                  message sent!
+               </p>
             </form>
          </div>
       </div>
