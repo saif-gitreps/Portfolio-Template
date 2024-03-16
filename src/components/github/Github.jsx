@@ -2,25 +2,57 @@ import { useLoaderData } from "react-router-dom";
 
 export default function Github() {
    const data = useLoaderData();
-
-   // the perk of using loader instead of using useeffect is that when we reduce the slight lag from
-   // api calls since when the mouse hovers over a link that may call a potential api , it fires the api call way before the click happens.
-
-   // const [data, setData] = useState({});
-   // useEffect(() => {
-   //    fetch("https://api.github.com/users/saif-gitreps")
-   //       .then((result) => result.json())
-   //       .then((data) => {
-   //          console.log(data);
-   //          setData(data);
-   //       });
-   // }, []);
    return (
-      <div className="text-center m-4 bg-gray-100 text-gray-800 p-4 text-3xl flex items-center justify-center">
-         <div className="text-center flex justify-center w-28 ">
-            <img src={data.avatar_url} alt="github-avatar" className="rounded-full " />
+      <div className="flex justify-center flex-col md:flex-row items-center py-10">
+         <div className="card m-10">
+            <div className="card__img"></div>
+            <p className="card__title text-2xl font-semibold">Project</p>
+            <div className="card__descr-wrapper flex-col justify-between h-full">
+               <p className="card__descr text-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+                  blanditiis nemo fugit autem possimus, magnam consequatur sint esse.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
+                  deleniti labore beatae reiciendis iusto non eaque. Modi nisi odit,
+                  assumenda quas, temporibus nam magni aliquam facilis rem illum sapiente?
+                  Facilis!
+               </p>
+               <div className="card__links text-xl">
+                  <div>
+                     <a className="link text-blue-800 font-semibold" href="#">
+                        <img src="src/assets/icons8-github-96.png" />
+                        Code
+                     </a>
+                  </div>
+                  <div>
+                     <a className="link text-blue-800 font-semibold" href="#">
+                        Preview
+                     </a>
+                  </div>
+               </div>
+            </div>
          </div>
-         <h1>Github followers: {data.followers}</h1>
+         <div className="card m-10">
+            <div className="card__img"></div>
+            <p className="card__title">Project</p>
+            <div className="card__descr-wrapper flex-col justify-between h-full">
+               <p className="card__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+                  blanditiis nemo fugit autem possimus, magnam consequatur sint esse.
+               </p>
+               <div className="card__links">
+                  <div>
+                     <a className="link" href="#">
+                        Preview
+                     </a>
+                  </div>
+                  <div>
+                     <a className="link" href="#">
+                        Code
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
    );
 }

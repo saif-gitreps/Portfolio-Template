@@ -2,19 +2,11 @@ import { useForm, ValidationError } from "@formspree/react";
 
 export default function Home() {
    const [state, handleSubmit] = useForm("meqyzybj");
-   // if (state.succeeded) {
-   //    return <p>Thanks for joining!</p>;
-   // }
 
    return (
       <div className="mx-auto w-full max-w-7xl">
          <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-1">
             <div className="relative z-10 max-w-screen-xl py-10 my-10 mx-auto sm:px-6 lg:px-8">
-               {/* <div className="inset-0 w-full sm:my-1 sm:pt-1 pt-12 ">
-                  <div className="wrapper">
-                     <div className="typing-demo">Hello Saif here,</div>
-                  </div>
-               </div> */}
                <div className="terminal-loader sm:relative absolute">
                   <div className="terminal-header">
                      <div className="terminal-title">terminal</div>
@@ -76,9 +68,9 @@ export default function Home() {
                onSubmit={handleSubmit}
                className="flex-col items-start gap-3 w-1/2 p-8 rounded-xl shadow-lg"
             >
-               <div className="text-blue-900 text-3xl font-semibold tracking-tighter leading-9 ">
-                  Send an email{" "}
-                  <span className="text-black text-2xl">(saifrahman3092@gmail.com)</span>
+               <div className="text-blue-900 text-2xl font-semibold tracking-tighter leading-9 ">
+                  Send an email to{" "}
+                  <span className="text-black text-2xl">saifrahman3092@gmail.com</span>
                </div>
                <input
                   type="email"

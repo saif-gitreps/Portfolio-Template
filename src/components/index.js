@@ -6,5 +6,16 @@ import Footer from "./footer/Footer";
 import User from "./User/User";
 import Github from "./github/Github";
 import GithubStatsLoader from "./github/GithubStatsLoader";
+import GithubReposLoader from "./github/GithubReposLoader";
 
-export { Home, About, Contact, Header, Footer, User, Github, GithubStatsLoader };
+export {
+   Home,
+   About,
+   Contact,
+   Header,
+   Footer,
+   User,
+   Github,
+   GithubStatsLoader,
+   GithubReposLoader,
+};

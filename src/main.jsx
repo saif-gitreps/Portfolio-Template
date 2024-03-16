@@ -2,14 +2,7 @@ import React from "react";
 
 import ReactDOM from "react-dom/client";
 
-import {
-   Home,
-   About,
-   Contact,
-   User,
-   Github,
-   GithubStatsLoader,
-} from "./components/index";
+import { Home, Github, GithubReposLoader } from "./components/index";
 
 import "./index.css";
 
@@ -25,10 +18,7 @@ const router = createBrowserRouter(
    createRoutesFromElements(
       <Route path="/" element={<Layout />}>
          <Route path="" element={<Home />} />
-         <Route path="about" element={<About />} />
-         <Route path="contact" element={<Contact />} />
-         <Route path="user/:id" element={<User />} />
-         <Route loader={GithubStatsLoader} path="github" element={<Github />} />
+         <Route loader={GithubReposLoader} path="github" element={<Github />} />
       </Route>
    )
 );
