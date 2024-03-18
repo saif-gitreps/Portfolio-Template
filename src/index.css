@@ -97,8 +97,8 @@
 .card {
    --font-color: #323232;
    --bg-color: ##f6f6f6;
-   width: 30rem;
-   height: 25rem;
+   width: 25rem;
+   height: 20rem;
    border-radius: 20px;
    background: var(--bg-color);
    box-shadow: -4px 4px 18px #5a5a5a, 9px -9px 18px #ffffff;
