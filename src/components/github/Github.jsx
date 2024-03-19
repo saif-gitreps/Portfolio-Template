@@ -1,38 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { Link } from "react-router-dom";
-
-const Card = ({ data, color }) => {
-   return (
-      <div className="card m-8 self-center">
-         <div className={`card__img ${color}`}></div>
-         <p className="card__title text-3xl font-semibold"> {data.name} </p>
-         <div className="card__descr-wrapper flex-col justify-between h-full">
-            <p className="card__descr text-xl">
-               {data.description}
-               {/* <br />
-               <span className="text-blue-800 font-semibold">Language: </span>
-               {data.language} */}
-            </p>
-            <div className="card__links text-xl">
-               <div className="flex flex-row">
-                  <img src="src/assets/icons8-github-96.png" className="w-7 h-7" />
-                  <Link
-                     className="link text-blue-800 font-semibold flex items-center"
-                     to={data.html_url}
-                  >
-                     Source Code
-                  </Link>
-               </div>
-               <div>
-                  <Link className="link text-blue-800 font-semibold" to={data.homepage}>
-                     Preview
-                  </Link>
-               </div>
-            </div>
-         </div>
-      </div>
-   );
-};
+import Card from "./RepoCard";
 
 export default function Github() {
    const data = useLoaderData();

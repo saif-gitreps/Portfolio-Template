@@ -7,7 +7,7 @@ export default function Home() {
       <div className="mx-auto w-full max-w-7xl">
          <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-1">
             <div className="relative z-10 max-w-screen-xl py-10 my-10 mx-auto sm:px-6 lg:px-8">
-               <div className="terminal-loader sm:relative absolute">
+               <div className="terminal-loader max-w-80 sm:max-w-96 sm:relative absolute">
                   <div className="terminal-header">
                      <div className="terminal-title">terminal</div>
                      <div className="terminal-controls">
@@ -17,7 +17,7 @@ export default function Home() {
                      </div>
                   </div>
                   <div className="content">
-                     <div className="text">Hi! Saif here..</div>
+                     <div className="text">Hello! Saif here..</div>
                   </div>
                </div>
 
@@ -63,10 +63,10 @@ export default function Home() {
                </li>
             </ul>
          </div>
-         <div className="flex justify-end relative overflow text-black rounded-lg sm:mx-16 mx-2 sm:p-10 ">
+         <div className="flex justify-centre md:justify-end relative overflow text-black rounded-lg sm:mx-16 mx-2 sm:p-10 ">
             <form
                onSubmit={handleSubmit}
-               className="flex-col items-start gap-3 w-1/2 p-8 rounded-xl shadow-lg"
+               className="flex-col w-96 items-start gap-3 md:w-1/2 p-8 rounded-xl shadow-lg"
             >
                <div className="text-blue-900 text-2xl font-semibold tracking-tighter leading-9 ">
                   Send an email to{" "}
