@@ -9,7 +9,7 @@ export default function Card({ data, color }) {
             <p className="card__descr text-lg xl:text-xl">{data.description}</p>
             <div className="card__links text-xl">
                <div className="flex flex-row">
-                  <img src="src/assets/icons8-github-96.png" className="w-7 h-7" />
+                  <img src="/icons8-github-96.png" className="w-7 h-7" />
                   <Link
                      className="link text-blue-800 font-semibold flex items-center"
                      to={data.html_url}

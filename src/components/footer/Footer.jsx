@@ -8,48 +8,48 @@ export default function Footer() {
                <span className="text-sm text-gray-500 sm:text-center"></span>
                <div className="flex mt-4 sm:justify-center sm:mt-0 items-center">
                   <Link
-                     to="https://www.facebook.com/oxford.oxford.108"
+                     to="#"
                      target="_blank"
                      className="text-gray-500 hover:text-gray-900 hover:scale-150 transition-transform"
                   >
                      <img
-                        src="src/assets/icons8-facebook-96.png"
+                        src="/icons8-facebook-96.png"
                         className="h-10 w-10"
                         alt="Facebook"
                      />
                      <span className="sr-only">Facebook</span>
                   </Link>
                   <Link
-                     to="https://github.com/saif-gitreps"
+                     to="#"
                      target="_blank"
                      className="text-gray-500 hover:text-gray-900 hover:scale-150 transition-transform"
                   >
                      <img
-                        src="src/assets/icons8-github-96.png"
+                        src="/icons8-github-96.png"
                         className="h-10 w-10"
                         alt="Github"
                      />
                      <span className="sr-only">Github</span>
                   </Link>
                   <Link
-                     to="https://www.linkedin.com/in/saifur-rahman-4184b3244/"
+                     to="#"
                      target="_blank"
                      className="text-gray-500 hover:text-gray-900 hover:scale-150 transition-transform"
                   >
                      <img
-                        src="src/assets/icons8-linkedin-96.png"
+                        src="/icons8-linkedin-96.png"
                         className="h-10 w-10"
                         alt="linkedin"
                      />
                      <span className="sr-only">LinkedIN</span>
                   </Link>
                   <Link
-                     to="https://stackoverflow.com/users/22942210/saif-stacks-911"
+                     to="#"
                      target="_blank"
                      className="text-gray-500 hover:text-gray-900 hover:scale-150 transition-transform"
                   >
                      <img
-                        src="src/assets/icons8-stack-overflow-96.png"
+                        src="/icons8-stack-overflow-96.png"
                         className="h-10 w-10"
                         alt="Stack overflow"
                      />
@@ -59,19 +59,15 @@ export default function Footer() {
                      to="#"
                      className="text-gray-500 hover:text-gray-900 hover:scale-150 transition-transform"
                   >
-                     <img
-                        src="src/assets/icons8-twitterx-96.png"
-                        className="h-10 w-10"
-                        alt="X"
-                     />
+                     <img src="/icons8-twitterx-96.png" className="h-10 w-10" alt="X" />
                      <span className="sr-only">X</span>
                   </Link>
                   <Link
-                     to="https://leetcode.com/saifrhman03/"
+                     to="#"
                      target="_blank"
                      className="text-gray-500 hover:text-gray-900 hover:scale-150 transition-transform"
                   >
-                     <img src="src/assets/leetcode.png" className="h-10 w-10" alt="X" />
+                     <img src="/leetcode.png" className="h-10 w-10" alt="X" />
                      <span className="sr-only">LeetCode</span>
                   </Link>
                </div>
